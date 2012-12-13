@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
  * an XML document containing the Base64 encoded PDF file and vice-versa.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.5
+ * @version 1.0
  */
 public class Smic {
 

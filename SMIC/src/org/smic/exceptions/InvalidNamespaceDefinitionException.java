@@ -5,7 +5,7 @@ package org.smic.exceptions;
  * does not appear to be valid
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class InvalidNamespaceDefinitionException extends Exception {
 

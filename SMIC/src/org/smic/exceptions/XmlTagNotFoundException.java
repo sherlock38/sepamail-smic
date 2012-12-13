@@ -5,7 +5,7 @@ package org.smic.exceptions;
  * PDF file content tag
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class XmlTagNotFoundException extends Exception {
 

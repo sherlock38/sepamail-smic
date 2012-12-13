@@ -11,7 +11,7 @@ import org.w3c.dom.Document;
  * SmicFileUtils is a class which groups static methods pertaining file operations used throughout the SMIC module.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class SmicFileUtils {
 
