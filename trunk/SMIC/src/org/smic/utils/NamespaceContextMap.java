@@ -16,8 +16,8 @@ public final class NamespaceContextMap implements NamespaceContext {
     private final Map<String, Set<String>> nsMap;
 
     /**
-     * Constructor that takes a map of XML prefix-namespaceURI values. A defensive copy is made of the map.
-     * An IllegalArgumentException will be thrown if the map attempts to remap the standard prefixes defined in the
+     * Constructor that takes a map of XML prefix-namespaceURI values. A defensive copy is made of the map. An
+     * IllegalArgumentException will be thrown if the map attempts to remap the standard prefixes defined in the
      * NamespaceContext contract.
      * 
      * @param prefixMappings a map of prefix:namespaceURI values
@@ -33,7 +33,7 @@ public final class NamespaceContextMap implements NamespaceContext {
      * @param mappingPairs pairs of prefix-namespaceURI values
      */
     public NamespaceContextMap(String... mappingPairs) {
-      this(toMap(mappingPairs));
+        this(toMap(mappingPairs));
     }
 
     private static Map<String, String> toMap(String... mappingPairs) {

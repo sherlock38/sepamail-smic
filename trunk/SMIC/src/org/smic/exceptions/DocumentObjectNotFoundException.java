@@ -5,7 +5,7 @@ package org.smic.exceptions;
  * could not be found in the missive XML document.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class DocumentObjectNotFoundException extends Exception {
 

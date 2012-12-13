@@ -11,7 +11,7 @@ import org.smic.exceptions.InvalidConfigurationException;
  * The ConfigReader class reads and parses the SMOC module configuration file.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class ConfigReader {
 

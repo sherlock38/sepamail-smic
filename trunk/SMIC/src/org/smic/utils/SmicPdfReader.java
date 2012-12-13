@@ -16,7 +16,7 @@ import org.xml.sax.SAXException;
  * The SmicPdfReader class is used to read and extract XMP tags from a PDF file as an XML document.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class SmicPdfReader {
 

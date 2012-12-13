@@ -5,7 +5,7 @@ package org.smic.exceptions;
  * found in the missive XML document using the given XPath expression.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class ContainerNodeNotFoundException extends Exception {
 

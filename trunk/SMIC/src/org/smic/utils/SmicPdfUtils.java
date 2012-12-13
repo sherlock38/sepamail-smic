@@ -12,7 +12,7 @@ import org.smic.exceptions.InvalidPdfPageNumberException;
  * SmicPdfUtils is a class which groups static methods pertaining PDF file operations used throughout the SMIC module.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class SmicPdfUtils {
 

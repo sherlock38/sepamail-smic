@@ -1,6 +1,9 @@
 package org.smic.transformation;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -26,7 +29,7 @@ import org.xml.sax.SAXException;
  * missive XML file.
  * 
  * @author Bishan Kumar Madhoo <bishan.madhoo@idsoft.mu>
- * @version 0.1
+ * @version 1.0
  */
 public class SmicPdf {
 
@@ -244,7 +247,7 @@ public class SmicPdf {
         tokens.put("#SMIC#DocumentLanguage#", this.documentLocale);
         tokens.put("#SMIC#DocumentApplicationType#", this.documentMime);
         tokens.put("#SMIC#DocumentFilename#", SmicFileUtils.getFilename(this.pdfFilename));
-        tokens.put("#SMIC#DocumentData#", encodedPdfFileContent);
+        tokens.put("#SMIC#DocumentData#", this.xmlWrap(encodedPdfFileContent, 76));
 
         // Tokens map iterator
         Iterator mapIt = tokens.entrySet().iterator();
@@ -465,5 +468,45 @@ public class SmicPdf {
         }
 
         return new NamespaceContextMap(mappings);
+    }
+
+    /**
+     * Wrap a string to the specified length
+     * 
+     * @param rawString String that needs to be wrapped
+     * @param length Maximum number of characters in a line
+     * @return Wrapped string
+     */
+    private String xmlWrap(String rawString, int length) {
+
+        // Wrapped string
+        String wrappedString = "";
+
+        // Character position counter
+        int i = 0;
+
+        // Scan the list of characters in the string that needs to be wrapped
+        while (i < rawString.length()) {
+
+            // Check if we are at the end of the string
+            if (i + length > rawString.length()) {
+
+                // Extract a line of data from the string that needs to be wrapped
+                wrappedString += rawString.substring(i, rawString.length());
+
+            } else {
+
+                // Extract a line of data from the string that needs to be wrapped
+                wrappedString += rawString.substring(i, i + length);
+            }
+
+            // Add XML new line character to the string
+            wrappedString += '\n';
+
+            // Increase the character position counter
+            i =  i + length;
+        }
+
+        return wrappedString.trim();
     }
 }
