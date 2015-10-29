@@ -1,0 +1,1 @@
+SMIC (SepaMail Interface Cross) convert a missive SEPAmail containing a pdf document into a pdf document containing the missive SEPAmail and vice versa.
